@@ -1,0 +1,139 @@
+.collection {
+    background: mix($pink, $white, 0.5%);
+    box-shadow: 0px -25px 100px rgba(0, 0, 0, 0.10);
+}
+
+.filters {
+    padding: 12px 0px;
+}
+
+.view_options {
+    float: right;
+    span {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        vertical-align: top;
+        opacity: 0.35;
+        &.active {
+            background-position: 0 -22px;
+            opacity: 1;
+        }
+    }
+}
+
+.grid_icon {
+    background: url('images/grid_icon.png');
+    margin-right: 7px;
+}
+
+.list_icon {
+    background: url('images/list_icon.png');
+}
+
+.links_shared_title {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.shared_links_list {
+    padding: 15px 0;
+    overflow: hidden;
+}
+
+.shared_link {
+    width: 33.3333%;
+    float: left;
+    padding: 14px;
+}
+
+.mentions {
+    position: relative;
+    padding: 12px;
+    font-size: 12px;
+    opacity: 0.65;
+    >span {
+        display: inline-block;
+        background: $light_gray;
+        padding: 3px 7px;
+        font-size: 11px;
+        border-radius: 3px;
+        margin-bottom: 7px;
+        margin-right: 5px
+    }
+}
+
+.select_box {
+    position: absolute;
+    bottom: -10px;
+    right: 7px;
+    width: 18px;
+    height: 18px;
+    transform: scale(0);
+    transition: all 0.2s ease-out;
+    z-index: 5;
+}
+
+.shared_link .card{
+ &:hover {
+    .select_box {
+        transform: scale(1);
+    }
+  }    
+}
+
+
+.shared_link.selected {
+    .select_box {
+        transform: scale(1);
+    }
+}
+
+.select_link,
+.select_icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.select_link {
+    opacity: 0;
+    z-index: 4;
+}
+
+.select_icon {
+    background: lighten($black, 35%);
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+input.select_link[type=checkbox]:checked + .select_icon {
+    background: $pink;
+}
+
+.copy_icon{
+	display: block;
+	height: 45px;
+	width: 45px;
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	background: $pink;
+	border-radius: 50%;
+	box-shadow: 0px 2px 3px transparentize($black, 0.65);
+	cursor: pointer;
+	transition: 0.3s ease-out;
+	&:hover{
+		box-shadow: 0px 5px 10px -2px transparentize($black, 0.65);
+		transform: translateY(-3px);
+	}
+}

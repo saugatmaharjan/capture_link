@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Varela Round', sans-serif;
+    color: $black;
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+}
+
+.container {
+    width: 1200px;
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 10px transparentize($pink, 0.85);
+    transition: all 0.3s ease;
+    &:hover{
+    	transform: translateY(-5px);
+    	box-shadow: 0px 8px 25px -3px transparentize($pink, 0.9);
+    }
+    .media {
+    	border-radius: 4px 4px 0 0;
+    }
+}
+
+.media {
+    position: relative;
+    padding: 12px;
+    background: $light_gray;
+    padding-left: 62px;
+    >img {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        max-width: 50px;
+    }
+    @at-root .media_title {
+        display: block;
+    }
+
+    small{
+    	font-size: 12px;
+    	opacity: 0.65;
+    }
+}
+
