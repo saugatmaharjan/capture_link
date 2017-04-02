@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Palanquin+Dark:400,700|Varela+Round");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -131,7 +132,16 @@ header {
   box-shadow: 0px -25px 100px rgba(0, 0, 0, 0.1); }
 
 .filters {
-  padding: 12px 0px; }
+  padding: 16px 0px;
+  margin-bottom: 15px; }
+
+.from input, .to input {
+  margin: 0 15px 0 7px;
+  background: #e5e5e5;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 7px;
+  color: #959595; }
 
 .view_options {
   float: right; }
@@ -214,13 +224,14 @@ header {
   z-index: 4; }
 
 .select_icon {
-  background: #aeaeae;
+  background: #aeaeae url("images/check.png") no-repeat center center;
+  background-size: 55%;
   pointer-events: none;
   border-radius: 50%;
   z-index: 2; }
 
 input.select_link[type=checkbox]:checked + .select_icon {
-  background: #f75176; }
+  background-color: #f75176; }
 
 .copy_icon {
   display: block;
@@ -229,11 +240,11 @@ input.select_link[type=checkbox]:checked + .select_icon {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  background: #f75176;
+  background: #f75176 url("images/copy.png") no-repeat center center;
   border-radius: 50%;
   box-shadow: 0px 2px 3px rgba(85, 85, 85, 0.35);
   cursor: pointer;
   transition: 0.3s ease-out; }
   .copy_icon:hover {
     box-shadow: 0px 5px 10px -2px rgba(85, 85, 85, 0.35);
-    transform: translateY(-3px); }
+    transform: translateY(-2px); }

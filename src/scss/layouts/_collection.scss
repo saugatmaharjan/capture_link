@@ -4,7 +4,19 @@
 }
 
 .filters {
-    padding: 12px 0px;
+    padding: 16px 0px;
+    margin-bottom: 15px;
+}
+
+.from,.to{
+	input{
+		margin: 0 15px 0 7px;
+		background: mix($black, $white, 10%);
+		border: none;
+		border-radius: 4px;
+		padding: 3px 7px;
+		color: lighten($black, 25%);
+	}
 }
 
 .view_options {
@@ -110,14 +122,15 @@
 }
 
 .select_icon {
-    background: lighten($black, 35%);
+    background: lighten($black, 35%) url('images/check.png') no-repeat center center;
+    background-size: 55%;
     pointer-events: none;
     border-radius: 50%;
     z-index: 2;
 }
 
 input.select_link[type=checkbox]:checked + .select_icon {
-    background: $pink;
+    background-color: $pink;
 }
 
 .copy_icon{
@@ -127,13 +140,13 @@ input.select_link[type=checkbox]:checked + .select_icon {
 	position: fixed;
 	bottom: 25px;
 	right: 25px;
-	background: $pink;
+	background: $pink url('images/copy.png') no-repeat center center;
 	border-radius: 50%;
 	box-shadow: 0px 2px 3px transparentize($black, 0.65);
 	cursor: pointer;
 	transition: 0.3s ease-out;
 	&:hover{
 		box-shadow: 0px 5px 10px -2px transparentize($black, 0.65);
-		transform: translateY(-3px);
+		transform: translateY(-2px);
 	}
 }
